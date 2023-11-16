@@ -1,0 +1,217 @@
+<div class="main_header">
+    <div class="main_header_heading">
+        <p>Dashboard / Employees</p>
+        <h2>Employees</h2>
+    </div>
+
+    <div class="right" id="right">
+        <div class="main_header_search">
+            <div class="main_header_search_searchbar" id="searchBar">
+                <span class="material-symbols-rounded">search</span>
+                <input type="text" placeholder="Search" id="search" onkeyup="Search()">
+            </div>
+            <span class="notification_icon material-symbols-rounded">notifications</span>
+            <div class="main_img">
+                <img src="/img/img1.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--  Alert -->
+<div class="alert hide" id="alert">
+    <span class="material-symbols-outlined" id="alertIcon"></span>
+    <span class="msg" id="alertMsg"></span>
+</div>
+
+<!-- table  -->
+<div class="table">
+    <div class="table_header">
+        <div class="table_header_description">
+            <h3>Employees List</h3>
+            <select name="number" id="select">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select>
+            <span>of 10</span>
+        </div>
+        <div class="button">
+            <button class="butn" id="openButton" onclick="openAddEmployee()">
+                Add Employee
+            </button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th><select>
+                        <option>Sl.No</option>
+                    </select></th>
+                <th><select>
+                        <option>Name</option>
+                    </select></th>
+                <th><select>
+                        <option>Email</option>
+                    </select></th>
+                <th><select>
+                        <option>Phone</option>
+                    </select></th>
+                <th><select>
+                        <option>Gender</option>
+                    </select></th>
+                <th><select>
+                        <option>DOB</option>
+                    </select></th>
+                <th><select>
+                        <option>Country</option>
+                    </select></th>
+                <th><button></button></th>
+            </tr>
+        </thead>
+
+        <tbody id="employeeList">
+            <!-- <p id="no_user">No user found</p> -->
+            <!-- <tr>
+                <td>#01</td>
+                <td><span class="icon"><img src="Img/icon.png" alt="">Mr. Michael Johnson</span></td>
+                <td>michaeljohnson@example.com</td>
+                <td>5551234567</td>
+                <td>Male</td>
+                <td>10 December 1985</td>
+                <td>USA</td>
+                <td><button><span class="material-symbols-rounded">
+                            more_horiz
+                        </span></button></td>
+            </tr>
+
+            <tr>
+                <td>#01</td>
+                <td><span class="icon"><img src="Img/icon.png" alt="">Mr. Michael Johnson</span></td>
+                <td>michaeljohnson@example.com</td>
+                <td>5551234567</td>
+                <td>Male</td>
+                <td>10 December 1985</td>
+                <td>USA</td>
+                <td>
+                    <div class="dropdown" id="dropDown">
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="material-symbols-rounded"> more_horiz </span>
+                        </button>
+                        <ul class="dropdown-details" id="dropdownDetails">
+                            <li><a href="#" id="viewButton"><span class="material-symbols-outlined">
+                                        visibility
+                                    </span>View Details</a></li>
+                            <li><a href="#" id="editButton"><span class="material-symbols-outlined">
+                                        edit
+                                    </span> Edit </a></li>
+                            <li><a href="#" id="deleteButton"><span class="material-symbols-outlined">
+                                        delete
+                                    </span> Delete </a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>#01</td>
+                <td><span class="icon"><img src="Img/icon.png" alt="">Mr. Michael Johnson</span></td>
+                <td>michaeljohnson@example.com</td>
+                <td>5551234567</td>
+                <td>Male</td>
+                <td>10 December 1985</td>
+                <td>USA</td>
+                <td><button><span class="material-symbols-rounded">
+                            more_horiz
+                        </span></button></td>
+            </tr>
+
+            <tr>
+                <td>#01</td>
+                <td><span class="icon"><img src="Img/icon.png" alt="">Mr. Michael Johnson</span></td>
+                <td>michaeljohnson@example.com</td>
+                <td>5551234567</td>
+                <td>Male</td>
+                <td>10 December 1985</td>
+                <td>USA</td>
+                <td><button><span class="material-symbols-rounded">
+                            more_horiz
+                        </span></button></td>
+            </tr>
+
+            <tr>
+                <td>#01</td>
+                <td><span class="icon"><img src="Img/icon.png" alt="">Mr. Michael Johnson</span></td>
+                <td>michaeljohnson@example.com</td>
+                <td>5551234567</td>
+                <td>Male</td>
+                <td>10 December 1985</td>
+                <td>USA</td>
+                <td><button><span class="material-symbols-rounded">
+                            more_horiz
+                        </span></button></td>
+            </tr>
+
+            <tr>
+                <td>#01</td>
+                <td><span class="icon"><img src="Img/icon.png" alt="">Mr. Michael Johnson</span></td>
+                <td>michaeljohnson@example.com</td>
+                <td>5551234567</td>
+                <td>Male</td>
+                <td>10 December 1985</td>
+                <td>USA</td>
+                <td><button><span class="material-symbols-rounded">
+                            more_horiz
+                        </span></button></td>
+            </tr> -->
+        </tbody>
+    </table>
+
+</div>
+
+<!-- pagination  -->
+<div class="row">
+    <div class="col">
+        <nav class="pagination" id="pagination">
+            <!-- <ul class="pagination" id="paginationContainer"> -->
+            <!-- <li class="page-item">
+                    <a class="page-link lnk" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li> -->
+            <!-- <li class="page-item pagination-button" id="prev-button">
+                    <a class="page-link lnk" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&lt;</span>
+                    </a>
+                </li> -->
+            <!-- <li class="page-item"><a class="page-link lnk" href="#">1</a></li>
+                <li class="page-item"><a class="page-link lnk" href="#">2</a></li>
+                <li class="page-item"><a class="page-link lnk" href="#">3</a></li> -->
+            <!-- <li class="page-item" id="next-button">
+                    <a class="page-link lnk" href="#" aria-label="Next">
+                        <span aria-hidden="true">&gt;</span>
+                    </a>
+                </li>  -->
+            <!-- <li class="page-item">
+                    <a class="page-link lnk" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li> -->
+            <!-- </ul> -->
+        </nav>
+
+    </div>
+</div>
+
+<!-- main_footer  -->
+<div class="main_footer">
+    <div class="rights">
+        <span> 2023 All Rights Reserved. Stackup</span>
+    </div>
+    <div class="terms" id="terms">
+        <span>Terms of Use </span>
+        <span>Privacy Policy</span>
+    </div>
+</div>

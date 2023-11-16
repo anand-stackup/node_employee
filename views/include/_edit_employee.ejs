@@ -1,0 +1,158 @@
+<div class="modal" id="editEmployeeModal">
+    <form class="main_modal" id="editEmployeeForm">
+        <div class="row modal_heading">
+            <div class="col-11">
+                <h4>Edit Employee</h4>
+            </div>
+            <div class="col-1 modal_heading_btn">
+                <button type="button" class="modal_btn" id="closeEditButton" onclick="closeEditEmployee()">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-2 edit_img_row" id="editImg">
+                <div class="text-center" id="empimg">
+                    <img src="#" alt="img" id="emp-image">
+                </div>
+            </div>
+            <div class="col-10 img_btn_box" id="changeImgDiv">
+
+                <button type="button" class="img_btn" id="changeImg" onclick="updateImage()">
+                    <!-- <input type="file" id="editedImg"> -->
+                    Change
+                </button>
+                <input type="file" id="editedImg">
+            </div>
+        </div>
+
+        <div class="row select_input">
+            <div class="col-md-4 selection">
+                <p>Salutation <span>*</span></p>
+                <select class="form-select" name="salutation" aria-label="Default select example"
+                    id="salutationValueEdit">
+                    <option selected>Select salutation</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <p>First Name <span>*</span></p>
+                <input type="text" class="form-control" name="firstName" placeholder="First Name"
+                    aria-label="First name" id="firstNameValueEdit">
+            </div>
+            <div class="col-md-4">
+                <p>Last Name <span>*</span></p>
+                <input type="text" class="form-control" name="lastName" placeholder="Last name "
+                    aria-label="First name" id="lastNameValueEdit">
+            </div>
+        </div>
+
+        <div class="row contact_input">
+            <div class="col-md">
+                <p>Email Address <span>*</span></p>
+                <input type="email" class="form-control" name="email" placeholder="mail@simmmple.com"
+                    aria-label="First name" id="emailValueEdit">
+            </div>
+            <div class="col-md">
+                <p>Mobile Number <span>*</span></p>
+                <input type="number" class="form-control" name="phone" placeholder="enter mobile number"
+                    aria-label="Last name" id="phoneValueEdit">
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md personal_info">
+                <p>Date of Birth <span>*</span></p>
+                <input type="date" class="form-control" name="dob" aria-label="First name" id="dobValueEdit">
+
+            </div>
+            <div class="col-md">
+                <p>Gender <span>*</span> </p>
+                <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault4" value="Male">
+                <label class="form-check-label radio_btn" for="flexRadioDefault4">
+                    Male
+                </label>
+
+                <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault3" value="Female">
+                <label class="form-check-label radio_btn" for="flexRadioDefault3">
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <div class="row contact_input">
+            <div class="col-md">
+                <p>Address <span>*</span></p>
+                <input type="text" class="form-control" name="address" placeholder="enter address"
+                    aria-label="Last name" id="addressValueEdit">
+            </div>
+        </div>
+
+        <div class="row contact_input">
+            <div class="col-md">
+                <p>Qualifications<span>*</span></p>
+                <input type="text" class="form-control" name="qualifications" placeholder="enter qualifications"
+                    aria-label="Last name" id="qualificationsValueEdit">
+            </div>
+        </div>
+
+        <div class="row select_input">
+            <div class="col-md selection">
+                <p>Country <span>*</span></p>
+                <select class="form-select" name="country" aria-label="Default select example"
+                    id="countryValueEdit">
+                    <option selected>country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Russia">Russia</option>
+                </select>
+            </div>
+            <div class="col-md selection">
+                <p>State <span>*</span></p>
+                <select class="form-select" name="state" aria-label="Default select example" id="stateValueEdit">
+                    <option selected>state</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Tamilnadu">Tamilnadu</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row contact_input">
+            <div class="col-md">
+                <p>City <span>*</span></p>
+                <input type="text" class="form-control" name="city" placeholder="enter city" aria-label="Last name"
+                    id="cityValueEdit">
+            </div>
+            <div class="col-md">
+                <p>Pin/Zip <span>*</span></p>
+                <input type="text" class="form-control" name="pin" placeholder="enter zip/pin"
+                    aria-label="Last name" id="pinValueEdit">
+            </div>
+        </div>
+
+        <div class="row contact_input">
+            <div class="col-md">
+                <p>User Name <span>*</span></p>
+                <input type="text" class="form-control" name="userName" placeholder="enter User Name"
+                    aria-label="Last name" id="userNameValueEdit">
+            </div>
+            <div class="col-md">
+                <p>Password <span>*</span></p>
+                <input type="password" class="form-control" name="password" placeholder="enter password"
+                    aria-label="Last name" id="passwordValueEdit">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col modal_footer">
+                <button type="button" class="footer_btn empty" id="cancelEditButton"
+                    onclick="closeEditEmployee()">Cancel</button>
+                <button type="button" class="footer_btn filled" id="submitBtn">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
